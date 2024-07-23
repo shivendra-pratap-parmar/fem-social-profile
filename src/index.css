@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'InterRegular';
+    src: url('./assets/fonts/Inter-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'InterSemiBold';
+    src: url('./assets/fonts/Inter-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'InterBold';
+    src: url('./assets/fonts/Inter-Bold.ttf');
+}
+
+:root{
+    --green: hsla(75, 94%, 57%, 0.9);
+    --white: #FFFFFF;
+    --grey_700: hsl(0, 0%, 20%);
+    --grey_800: hsl(0, 0%, 12%);
+    --grey_900: hsl(0, 0%, 8%);
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    background: var(--grey_900);
+    font-size: 14px;
+    font-family: InterRegular, sans-serif;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+}
+
+p, h1, h2, h3, h4, h5, h6{ margin: 0; }
+
+.fw-600{ font-family: InterSemiBold, sans-serif; }
+.fw-700{ font-family: InterBold, sans-serif; }
+
+.fs-1{ font-size: 1.75rem; }
+.o-90{ opacity: 0.9; }
+
+.profile_card_container{
+    background: var(--grey_800);
+    min-width: 386px;
+    min-height: 615px;
+    border-radius: 16px;
+}
+
+.header_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2em;
+    padding-top: 2em;
+}
+
+.profile_dp{
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+}
+
+.profile_name_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.5em;
+}
+
+.link_section{
+    padding-inline: 3em;
+    display: flex;    
+    flex-direction: column;
+    row-gap: 1em;
+    margin-top: 2em;
+}
+
+.link_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--grey_700);
+    border-radius: 5px;
+    padding-block: 1em;
+    transition: all 0.4s ease-in;
+    -webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+}
+
+.link_container:hover{
+    background: var(--green);
+    color: var(--grey_900);
+    cursor: pointer;
+    caret-color: var(--grey_900);
+}
+
+.text-primary{ color: var(--green); }
+
+@media (min-width: 320px) and (max-width: 425px){
+    body{ 
+        display: block; 
+        width: 100%;
+    }
+
+    .main_container{ 
+        width: 90%; 
+        height: 100%;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #root{ height: 100%; }
+
+    .profile_card_container{ min-width: 88%; }
+
+    .link_section{ padding-inline: 1.5em; }
+}
